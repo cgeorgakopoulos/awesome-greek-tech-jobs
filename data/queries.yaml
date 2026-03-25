@@ -1,6 +1,8 @@
 queries:
   - name: "Jobs by Workable: Software Engineer in Greece"
     url: https://jobs.workable.com/search?location=Greece&query=Software+Engineer
+  - name: "Data Engineer Jobs near Athens | Jobs By Innovative Greeks"
+    url: https://www.igwork.gr/search?location=Athens&query=Data+Engineer
   - name: "Kariera.gr: Tech Jobs"
     url: https://www.kariera.gr/en/jobs/it-telecoms
   - name: "LinkedIn: Data Engineer in Greece"
