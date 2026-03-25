@@ -1,6 +1,6 @@
 # awesome-greek-tech-jobs
 
-![Companies](https://img.shields.io/badge/Companies-228-blue?style=for-the-badge) ![Primary Hub](https://img.shields.io/badge/Main_Hub-Athens-red?style=for-the-badge) ![Remote Friendly](https://img.shields.io/badge/Remote_Teams-35-green?style=for-the-badge)
+![Companies](https://img.shields.io/badge/Companies-230-blue?style=for-the-badge) ![Primary Hub](https://img.shields.io/badge/Main_Hub-Athens-red?style=for-the-badge) ![Remote Friendly](https://img.shields.io/badge/Remote_Teams-35-green?style=for-the-badge)
 
 ## Overview
 This a comprehensive map of companies that hire for tech jobs in Greece. It highlights their focus sectors, careers pages, and LinkedIn profiles, while explicitly including details on work policies (Remote, Hybrid, On-site) and office locations. This repository is designed to help professionals explore opportunities and connect with organizations across the Greek tech ecosystem. 
@@ -11,9 +11,9 @@ This a comprehensive map of companies that hire for tech jobs in Greece. It high
 ### Insights
 | Metric | Data Point |
 | :--- | :--- |
-| **Total Organizations** | **228** curated tech teams |
-| **Top Tech Hub** | **Athens** (163 offices) |
-| **Work Flexibility** | **35** Remote · **117** Hybrid |
+| **Total Organizations** | **230** curated tech teams |
+| **Top Tech Hub** | **Athens** (165 offices) |
+| **Work Flexibility** | **35** Remote · **118** Hybrid |
 
 ---
 
