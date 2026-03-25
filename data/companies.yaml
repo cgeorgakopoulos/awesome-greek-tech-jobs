@@ -2225,3 +2225,24 @@
     - Athens
   linkedin_company_id: contactpigeon
   work_policy: on-site
+- name: Safesize
+  url: https://www.safesize.com/
+  sectors:
+    - AI
+    - Retail Tech
+    - Software Development
+  careers_url: https://safesize.recruitee.com/
+  linkedin_company_id: safesize®
+  locations:
+    - Athens
+  work_policy: on-site
+- name: Finloup
+  url: https://finloup.com/
+  sectors:
+    - Fintech
+    - Leasing
+  careers_url: https://apply.workable.com/finloup/
+  linkedin_company_id: finloup
+  locations:
+    - Athens
+  work_policy: hybrid
