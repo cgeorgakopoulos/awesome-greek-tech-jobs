@@ -35,45 +35,15 @@ jobs:
           git-cliff --version
 
       - name: Build release notes
-        env:
-          REPO: ${{ github.repository }}
-          SITE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: |
           set -euo pipefail
           PREV="$(git describe --tags --match 'v*' --abbrev=0 2>/dev/null || true)"
 
-          {
-            echo "**[Browse the curated list](${SITE})**"
-            echo ""
-            echo "---"
-            echo ""
-          } > release_notes.md
-
           if [ -n "${PREV}" ]; then
-            echo "### Highlights (git-cliff)" >> release_notes.md
-            echo "" >> release_notes.md
-            git-cliff "${PREV}..HEAD" --strip header --config cliff.toml >> release_notes.md || true
-            echo "" >> release_notes.md
+            git-cliff "${PREV}..HEAD" --config cliff.toml > release_notes.md || true
           else
-            echo "### Highlights (git-cliff)" >> release_notes.md
-            echo "" >> release_notes.md
-            git-cliff --strip header --config cliff.toml >> release_notes.md || true
-            echo "" >> release_notes.md
+            git-cliff --config cliff.toml > release_notes.md || true
           fi
-
-          echo "---" >> release_notes.md
-          echo "" >> release_notes.md
-          echo "### All commits in this release" >> release_notes.md
-          echo "" >> release_notes.md
-          echo "Every commit included in this tag (newest first):" >> release_notes.md
-          echo "" >> release_notes.md
-
-          if [ -n "${PREV}" ]; then
-            git log "${PREV}..HEAD" --pretty=format:'- %s ([`%h`](https://github.com/'"${REPO}"'/commit/%H))' >> release_notes.md
-          else
-            git log --pretty=format:'- %s ([`%h`](https://github.com/'"${REPO}"'/commit/%H))' >> release_notes.md
-          fi
-          echo "" >> release_notes.md
 
       - name: Random release title
         id: title
