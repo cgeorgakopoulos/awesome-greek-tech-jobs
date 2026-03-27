@@ -2247,3 +2247,41 @@
   locations:
     - Athens
   work_policy: hybrid
+- name: PIXELOCRACY
+  url: https://www.thepixelocracy.com/
+  sectors:
+    - Software Development
+    - Technology
+  careers_url: https://apply.workable.com/thepixelocracy/
+  linkedin_company_id: pixelocracy
+  locations:
+    - Athens
+  work_policy: hybrid
+- name: Decisal
+  url: https://www.decisal.com/
+  sectors:
+    - Airline Software
+  careers_url: https://apply.workable.com/decisal/
+  linkedin_company_id: decisal
+  work_policy: remote
+- name: Quadible
+  url: https://www.quadible.co.uk/
+  sectors:
+    - Data Security
+  careers_url: https://apply.workable.com/quadible/
+  linkedin_company_id: quadible
+  work_policy: remote
+- name: Monterail
+  url: https://www.monterail.com
+  sectors:
+    - Sofware Development
+  careers_url: https://apply.workable.com/monterail/
+  linkedin_company_id: monterail
+  work_policy: remote
+- name: Mindrift
+  url: https://mindrift.ai/
+  sectors:
+    - Data & AI
+  careers_url: https://apply.workable.com/toloka-ai/
+  linkedin_company_id: mindrift-ai
+  work_policy: remote
