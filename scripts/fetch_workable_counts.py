@@ -21,7 +21,7 @@ from scripts.workable_apply_slug import extract_workable_apply_slug
 YAML_PATH = Path("data/companies.yaml")
 OUTPUT_PATH = Path("data/workable_counts.yaml")
 
-DELAY_BETWEEN_SLUGS_SEC = 1.25
+DELAY_BETWEEN_SLUGS_SEC = 2.25
 TIMEOUT_SEC = (12, 30)
 _RETRY_TOTAL = 5
 _RETRY_BACKOFF_FACTOR = 1.5
@@ -105,7 +105,9 @@ def _fetch_count_from_count_endpoints(
         # If there are jobs but requester-geo "incountry" is 0, this endpoint is
         # likely not reflecting Greece. Continue to the next /count candidate.
         if raw_total > 0 and raw_incountry == 0:
-            print(f"{prefix}: /count geo mismatch ({url}) total={raw_total} incountry=0; trying next")
+            print(
+                f"{prefix}: /count geo mismatch ({url}) total={raw_total} incountry=0; trying next"
+            )
             continue
 
         print(f"{prefix}: /count hit ({url}) → {raw_incountry}/{raw_total}")
@@ -114,7 +116,9 @@ def _fetch_count_from_count_endpoints(
     return None
 
 
-def fetch_count(session: requests.Session, slug: str, idx: int = 0, total: int = 0) -> int:
+def fetch_count(
+    session: requests.Session, slug: str, idx: int = 0, total: int = 0
+) -> int:
     """Fetch count from /count endpoints only; return 0 on failure."""
     prefix = f"[{idx}/{total}] {slug}"
     count_value = _fetch_count_from_count_endpoints(session, slug, idx=idx, total=total)
